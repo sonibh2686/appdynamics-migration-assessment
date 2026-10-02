@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+  <rect width="1200" height="760" fill="#f5f8fc"/>
+  <rect x="32" y="28" width="1136" height="704" rx="22" fill="#ffffff" stroke="#dce5f1"/>
+  <rect x="32" y="28" width="1136" height="96" rx="22" fill="#07182f"/>
+  <circle cx="82" cy="76" r="22" fill="#18b3a5"/>
+  <text x="120" y="67" font-family="Segoe UI,Arial" font-size="16" font-weight="700" fill="#8ec5ff">TECHTURN • APPD EXTRACTOR</text>
+  <text x="120" y="96" font-family="Segoe UI,Arial" font-size="28" font-weight="700" fill="#ffffff">Migration Readiness Report</text>
+  <text x="875" y="80" font-family="Segoe UI,Arial" font-size="14" fill="#c9d9ec">PaymentsPortal • Demo</text>
+  <g font-family="Segoe UI,Arial"><rect x="55" y="155" width="145" height="92" rx="14" fill="#fff" stroke="#dce5f1"/>
+      <text x="71" y="183" font-size="14" fill="#5f6f86">Overall</text>
+      <text x="71" y="222" font-size="30" font-weight="700" fill="#0f1f3d">82%</text><rect x="220" y="155" width="145" height="92" rx="14" fill="#fff" stroke="#dce5f1"/>
+      <text x="236" y="183" font-size="14" fill="#5f6f86">Inventory</text>
+      <text x="236" y="222" font-size="30" font-weight="700" fill="#0f1f3d">100</text><rect x="385" y="155" width="145" height="92" rx="14" fill="#fff" stroke="#dce5f1"/>
+      <text x="401" y="183" font-size="14" fill="#5f6f86">Monitoring</text>
+      <text x="401" y="222" font-size="30" font-weight="700" fill="#0f1f3d">84</text><rect x="550" y="155" width="145" height="92" rx="14" fill="#fff" stroke="#dce5f1"/>
+      <text x="566" y="183" font-size="14" fill="#5f6f86">Alerting</text>
+      <text x="566" y="222" font-size="30" font-weight="700" fill="#0f1f3d">78</text></g>
+  <g font-family="Segoe UI,Arial"><text x="70" y="305" font-size="18" font-weight="700" fill="#0f1f3d">Readiness by area</text>
+      <rect x="70" y="321" width="830" height="12" rx="6" fill="#e9eff7"/>
+      <rect x="70" y="321" width="430" height="12" rx="6" fill="#0f6fff"/><text x="70" y="387" font-size="18" font-weight="700" fill="#0f1f3d">Missing-data migration impact</text>
+      <rect x="70" y="403" width="830" height="12" rx="6" fill="#e9eff7"/>
+      <rect x="70" y="403" width="520" height="12" rx="6" fill="#18b3a5"/><text x="70" y="469" font-size="18" font-weight="700" fill="#0f1f3d">Estimated migration effort</text>
+      <rect x="70" y="485" width="830" height="12" rx="6" fill="#e9eff7"/>
+      <rect x="70" y="485" width="610" height="12" rx="6" fill="#0f6fff"/><text x="70" y="551" font-size="18" font-weight="700" fill="#0f1f3d">Migration priorities</text>
+      <rect x="70" y="567" width="830" height="12" rx="6" fill="#e9eff7"/>
+      <rect x="70" y="567" width="430" height="12" rx="6" fill="#18b3a5"/></g>
+  <text x="70" y="695" font-family="Segoe UI,Arial" font-size="14" fill="#5f6f86">Sanitized TechTurn demo visualization • Read-only discovery and assessment</text>
+  </svg>
