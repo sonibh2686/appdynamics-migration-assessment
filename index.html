@@ -70,7 +70,7 @@
     .flow .arrow{text-align:center;color:var(--blue);font-size:22px}
     .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
     .shot{background:white;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
-    .shot img{width:100%;display:block}
+    .shot img{width:100%;display:block;aspect-ratio:16/10;object-fit:cover;background:#eef3f9}.shot a{display:block}.shot:hover{transform:translateY(-2px);transition:.2s ease}
     .shot .cap{padding:16px 18px}
     .shot .cap strong{display:block;margin-bottom:4px}
     .shot .cap span{font-size:14px;color:var(--muted)}
@@ -201,26 +201,41 @@
     </div>
   </section>
 
+
   <section id="screens">
     <div class="wrap">
       <h2 class="section-title">Platform & report screenshots</h2>
       <p class="section-sub">
-        All screenshots below use sanitized TechTurn demo data and are intended to demonstrate the workflow and reporting model without exposing customer information.
+        The screenshots below use sanitized TechTurn demo data. Click any image to open the full-size version.
       </p>
 
+      <h3 style="font-size:24px;margin:8px 0 18px">Extraction & discovery platform</h3>
       <div class="gallery">
-        <div class="shot"><img src="assets/controller-extraction.svg" alt="Controller extraction screen"><div class="cap"><strong>Controller extraction</strong><span>Read-only extraction of controller-level configuration and inventory.</span></div></div>
-        <div class="shot"><img src="assets/application-extraction.svg" alt="Application extraction screen"><div class="cap"><strong>Application extraction</strong><span>Select application-level components and generate structured output.</span></div></div>
-        <div class="shot"><img src="assets/executive-summary.svg" alt="Executive Summary report"><div class="cap"><strong>Executive Summary</strong><span>Architecture, readiness, monitoring coverage, risk and recommendations.</span></div></div>
-        <div class="shot"><img src="assets/technical-inventory.svg" alt="Technical Inventory report"><div class="cap"><strong>Technical Inventory</strong><span>Topology and dependency inventory designed for migration planning.</span></div></div>
-        <div class="shot"><img src="assets/health-rules.svg" alt="Health Rules report"><div class="cap"><strong>Health Rules assessment</strong><span>Coverage, policy/action attachment and rule-level recommendations.</span></div></div>
-        <div class="shot"><img src="assets/infrastructure.svg" alt="Infrastructure report"><div class="cap"><strong>Infrastructure assessment</strong><span>Hosts, JVMs, databases, backend classification and infrastructure findings.</span></div></div>
-        <div class="shot"><img src="assets/audit-governance.svg" alt="Audit and Governance report"><div class="cap"><strong>Audit & Governance</strong><span>Policy, action, ownership and governance coverage.</span></div></div>
-        <div class="shot"><img src="assets/migration-readiness.svg" alt="Migration Readiness report"><div class="cap"><strong>Migration Readiness</strong><span>Readiness by domain, missing-data impact, estimated effort and priorities.</span></div></div>
+        <div class="shot"><a href="assets/screenshots/ChatGPT Image Oct 1, 2026, 10_58_58 PM-1.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/screenshots/ChatGPT Image Oct 1, 2026, 10_58_58 PM-1.png" alt="Platform overview"></a><div class="cap"><strong>Platform overview</strong><span>AppDynamics discovery and extraction workflow.</span></div></div>
+        <div class="shot"><a href="assets/screenshots/ChatGPT Image Oct 1, 2026, 10_58_58 PM-2.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/screenshots/ChatGPT Image Oct 1, 2026, 10_58_58 PM-2.png" alt="Controller discovery"></a><div class="cap"><strong>Controller discovery</strong><span>Controller-level discovery and extraction.</span></div></div>
+        <div class="shot"><a href="assets/screenshots/ChatGPT Image Oct 1, 2026, 10_59_00 PM-3.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/screenshots/ChatGPT Image Oct 1, 2026, 10_59_00 PM-3.png" alt="Application discovery"></a><div class="cap"><strong>Application discovery</strong><span>Application-level extraction and configuration selection.</span></div></div>
+        <div class="shot"><a href="assets/screenshots/ChatGPT Image Oct 1, 2026, 10_59_00 PM-4.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/screenshots/ChatGPT Image Oct 1, 2026, 10_59_00 PM-4.png" alt="Extraction coverage"></a><div class="cap"><strong>Extraction coverage</strong><span>Structured discovery across monitoring objects.</span></div></div>
+        <div class="shot"><a href="assets/screenshots/ChatGPT Image Oct 1, 2026, 10_59_01 PM-5.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/screenshots/ChatGPT Image Oct 1, 2026, 10_59_01 PM-5.png" alt="Inventory view"></a><div class="cap"><strong>Inventory view</strong><span>Migration-focused inventory and extracted configuration.</span></div></div>
+        <div class="shot"><a href="assets/screenshots/ChatGPT Image Oct 1, 2026, 10_59_02 PM-6.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/screenshots/ChatGPT Image Oct 1, 2026, 10_59_02 PM-6.png" alt="Configuration analysis"></a><div class="cap"><strong>Configuration analysis</strong><span>Organized configuration output for assessment.</span></div></div>
+        <div class="shot"><a href="assets/screenshots/ChatGPT Image Oct 1, 2026, 10_59_03 PM-7.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/screenshots/ChatGPT Image Oct 1, 2026, 10_59_03 PM-7.png" alt="Discovery results"></a><div class="cap"><strong>Discovery results</strong><span>Structured extraction results and completeness.</span></div></div>
+        <div class="shot"><a href="assets/screenshots/ChatGPT Image Oct 1, 2026, 10_59_04 PM-8.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/screenshots/ChatGPT Image Oct 1, 2026, 10_59_04 PM-8.png" alt="Assessment workflow"></a><div class="cap"><strong>Assessment workflow</strong><span>From discovery output to migration assessment.</span></div></div>
+        <div class="shot"><a href="assets/screenshots/ChatGPT Image Oct 1, 2026, 10_59_04 PM-9.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/screenshots/ChatGPT Image Oct 1, 2026, 10_59_04 PM-9.png" alt="Migration analysis"></a><div class="cap"><strong>Migration analysis</strong><span>Configuration and migration-planning view.</span></div></div>
+        <div class="shot"><a href="assets/screenshots/ChatGPT Image Oct 1, 2026, 10_59_06 PM-10.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/screenshots/ChatGPT Image Oct 1, 2026, 10_59_06 PM-10.png" alt="Reporting workflow"></a><div class="cap"><strong>Reporting workflow</strong><span>Extraction data prepared for assessment reporting.</span></div></div>
+      </div>
+
+      <h3 style="font-size:24px;margin:42px 0 18px">Assessment & migration-readiness reports</h3>
+      <div class="gallery">
+        <div class="shot"><a href="assets/screenshots/ChatGPT Image Oct 1, 2026, 11_02_51 PM-1.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/screenshots/ChatGPT Image Oct 1, 2026, 11_02_51 PM-1.png" alt="Executive Summary"></a><div class="cap"><strong>Executive Summary</strong><span>High-level readiness, inventory, findings and recommendations.</span></div></div>
+        <div class="shot"><a href="assets/screenshots/ChatGPT Image Oct 1, 2026, 11_02_52 PM-2.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/screenshots/ChatGPT Image Oct 1, 2026, 11_02_52 PM-2.png" alt="Assessment Report"></a><div class="cap"><strong>Assessment Report</strong><span>Architecture, monitoring, governance and operational assessment.</span></div></div>
+        <div class="shot"><a href="assets/screenshots/ChatGPT Image Oct 1, 2026, 11_02_53 PM-3.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/screenshots/ChatGPT Image Oct 1, 2026, 11_02_53 PM-3.png" alt="Technical Inventory"></a><div class="cap"><strong>Technical Inventory</strong><span>Topology, tiers, nodes, transactions and dependency inventory.</span></div></div>
+        <div class="shot"><a href="assets/screenshots/ChatGPT Image Oct 1, 2026, 11_02_53 PM-4.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/screenshots/ChatGPT Image Oct 1, 2026, 11_02_53 PM-4.png" alt="Health Rules Assessment"></a><div class="cap"><strong>Health Rules Assessment</strong><span>Health-rule coverage, severity, scope and policy/action relationships.</span></div></div>
+        <div class="shot"><a href="assets/screenshots/ChatGPT Image Oct 1, 2026, 11_02_54 PM-5.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/screenshots/ChatGPT Image Oct 1, 2026, 11_02_54 PM-5.png" alt="Infrastructure Assessment"></a><div class="cap"><strong>Infrastructure Assessment</strong><span>Hosts, nodes, JVMs, databases and backend classification.</span></div></div>
+        <div class="shot"><a href="assets/screenshots/ChatGPT Image Oct 1, 2026, 11_02_55 PM-6.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/screenshots/ChatGPT Image Oct 1, 2026, 11_02_55 PM-6.png" alt="Audit & Governance"></a><div class="cap"><strong>Audit & Governance</strong><span>Policies, actions, ownership and governance coverage.</span></div></div>
+        <div class="shot"><a href="assets/screenshots/ChatGPT Image Oct 1, 2026, 11_02_56 PM-7.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/screenshots/ChatGPT Image Oct 1, 2026, 11_02_56 PM-7.png" alt="Migration Readiness"></a><div class="cap"><strong>Migration Readiness</strong><span>Readiness by area, gaps, effort indicators and priorities.</span></div></div>
+        <div class="shot"><a href="assets/screenshots/ChatGPT Image Oct 1, 2026, 11_02_56 PM-8.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/screenshots/ChatGPT Image Oct 1, 2026, 11_02_56 PM-8.png" alt="AppDynamics Assessment"></a><div class="cap"><strong>AppDynamics Assessment</strong><span>Consolidated application and monitoring readiness assessment.</span></div></div>
       </div>
     </div>
   </section>
-
   <section>
     <div class="wrap">
       <div class="callout" id="contact">
