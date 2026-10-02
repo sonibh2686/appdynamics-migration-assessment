@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="TechTurn AppDynamics Discovery, Extraction & Migration Assessment Platform — a read-only accelerator for AppDynamics discovery, assessment, reporting, and migration readiness.">
+  <title>TechTurn | AppDynamics Discovery & Migration Assessment Platform</title>
+
+  <!--
+    OPTIONAL VISITOR TRACKING (GA4)
+    1) Create a Google Analytics 4 property.
+    2) Replace G-XXXXXXXXXX below with your Measurement ID.
+    3) Uncomment the two script blocks.
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  -->
+
+  <style>
+    :root{
+      --bg:#f5f8fc; --panel:#ffffff; --ink:#0f1f3d; --muted:#5f6f86;
+      --line:#dce5f1; --blue:#0f6fff; --teal:#18b3a5; --navy:#07182f;
+      --good:#168b55; --shadow:0 16px 40px rgba(16,42,78,.10);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+    a{color:inherit}
+    .wrap{max-width:1180px;margin:auto;padding:0 24px}
+    .topbar{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+    .nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.2px}
+    .logo{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,#16c6a3,#116dff);box-shadow:var(--shadow)}
+    .navlinks{display:flex;gap:20px;font-size:14px;color:var(--muted)}
+    .navlinks a{text-decoration:none}
+    .hero{padding:86px 0 58px;background:
+      radial-gradient(circle at 80% 20%, rgba(24,179,165,.14), transparent 30%),
+      radial-gradient(circle at 10% 20%, rgba(15,111,255,.13), transparent 34%)}
+    .badge{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border:1px solid #bcd4ff;border-radius:999px;background:#edf5ff;color:#145fbf;font-size:13px;font-weight:700}
+    h1{font-size:clamp(38px,6vw,66px);line-height:1.05;margin:20px 0 20px;letter-spacing:-1.6px;max-width:1000px}
+    .lead{font-size:20px;color:var(--muted);max-width:880px;margin:0 0 28px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-block;text-decoration:none;padding:13px 18px;border-radius:10px;font-weight:700}
+    .btn.primary{background:var(--blue);color:white}
+    .btn.secondary{background:white;border:1px solid var(--line)}
+    .statgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:44px}
+    .stat{background:var(--panel);padding:22px;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow)}
+    .stat strong{display:block;font-size:24px}
+    .stat span{font-size:13px;color:var(--muted)}
+    section{padding:68px 0}
+    .section-title{font-size:34px;line-height:1.15;margin:0 0 14px}
+    .section-sub{color:var(--muted);max-width:820px;margin:0 0 30px}
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:var(--shadow)}
+    .card h3{margin:6px 0 8px}
+    .card p{margin:0;color:var(--muted)}
+    .num{font-size:13px;font-weight:800;color:var(--blue);text-transform:uppercase;letter-spacing:.8px}
+    .flow{display:grid;grid-template-columns:repeat(7,1fr);gap:10px;align-items:center;margin-top:26px}
+    .flow .step{background:white;border:1px solid var(--line);border-radius:14px;padding:18px 12px;text-align:center;font-weight:700}
+    .flow .arrow{text-align:center;color:var(--blue);font-size:22px}
+    .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+    .shot{background:white;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
+    .shot img{width:100%;display:block}
+    .shot .cap{padding:16px 18px}
+    .shot .cap strong{display:block;margin-bottom:4px}
+    .shot .cap span{font-size:14px;color:var(--muted)}
+    .callout{background:linear-gradient(135deg,#0b5df4,#0f7fbf 52%,#14a999);color:white;border-radius:22px;padding:34px;box-shadow:var(--shadow)}
+    .callout h2{margin:0 0 10px;font-size:34px}
+    .callout p{margin:0;color:#eaf5ff;max-width:900px}
+    .small{font-size:13px;color:var(--muted)}
+    footer{padding:38px 0 52px;color:var(--muted);font-size:14px}
+    code{background:#eef4fb;padding:2px 5px;border-radius:5px}
+    @media(max-width:900px){
+      .statgrid,.grid3,.gallery{grid-template-columns:1fr 1fr}
+      .flow{grid-template-columns:1fr}
+      .flow .arrow{transform:rotate(90deg)}
+      .navlinks{display:none}
+    }
+    @media(max-width:620px){
+      .statgrid,.grid3,.gallery{grid-template-columns:1fr}
+      .hero{padding-top:58px}
+      h1{font-size:42px}
+    }
+  </style>
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap nav">
+    <div class="brand"><div class="logo"></div><span>TechTurn</span></div>
+    <nav class="navlinks">
+      <a href="#platform">Platform</a>
+      <a href="#workflow">Workflow</a>
+      <a href="#reports">Reports</a>
+      <a href="#screens">Screens</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div class="badge">AppDynamics Discovery • Assessment • Migration Readiness</div>
+      <h1>Turn AppDynamics discovery into a structured migration plan.</h1>
+      <p class="lead">
+        A read-only discovery and assessment platform built to inventory AppDynamics environments,
+        organize configuration data, identify migration gaps, and generate migration-focused reports
+        before moving monitoring to a target observability platform such as Dynatrace.
+      </p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#screens">View platform screenshots</a>
+        <a class="btn secondary" href="#reports">See generated reports</a>
+      </div>
+
+      <div class="statgrid">
+        <div class="stat"><strong>Read-only</strong><span>Controller discovery and extraction</span></div>
+        <div class="stat"><strong>Structured</strong><span>Inventory across topology, monitoring, and configuration</span></div>
+        <div class="stat"><strong>Assessment</strong><span>Readiness, gaps, risks, and recommendations</span></div>
+        <div class="stat"><strong>Migration-focused</strong><span>Designed to support observability transformation</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="platform">
+    <div class="wrap">
+      <h2 class="section-title">Why I built it</h2>
+      <p class="section-sub">
+        Enterprise monitoring migrations often begin with a deceptively difficult question:
+        <strong>what exactly exists in the current AppDynamics environment?</strong>
+        Applications, tiers, nodes, business transactions, health rules, dashboards, agents, backends,
+        database dependencies, policies and configuration can be distributed across many areas of the controller.
+      </p>
+
+      <div class="grid3">
+        <div class="card"><div class="num">01 — Discover</div><h3>Inventory the environment</h3><p>Build a repeatable inventory instead of manually navigating application by application.</p></div>
+        <div class="card"><div class="num">02 — Extract</div><h3>Collect configuration data</h3><p>Use controller and application extraction modes to collect structured monitoring and configuration data.</p></div>
+        <div class="card"><div class="num">03 — Analyze</div><h3>Find gaps and risk</h3><p>Review coverage, ownership, rule quality, missing data, dependencies and migration readiness.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="workflow">
+    <div class="wrap">
+      <h2 class="section-title">Migration workflow</h2>
+      <p class="section-sub">The goal is not to copy monitoring technical debt into the target platform.</p>
+      <div class="flow">
+        <div class="step">Discover</div><div class="arrow">→</div>
+        <div class="step">Extract</div><div class="arrow">→</div>
+        <div class="step">Assess</div><div class="arrow">→</div>
+        <div class="step">Migrate & Validate</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reports">
+    <div class="wrap">
+      <h2 class="section-title">Generated assessment reports</h2>
+      <p class="section-sub">
+        The reporting layer turns raw extraction output into views that can be consumed by observability engineers,
+        migration teams, platform owners and stakeholders.
+      </p>
+
+      <div class="grid3">
+        <div class="card"><h3>Executive Summary</h3><p>High-level inventory, readiness, architecture, key findings and recommendations.</p></div>
+        <div class="card"><h3>Technical Inventory</h3><p>Application topology, tiers, nodes, transactions, backends and detailed inventory.</p></div>
+        <div class="card"><h3>Health Rules</h3><p>Coverage, policy/action relationships, scope, severity and rule-readiness analysis.</p></div>
+        <div class="card"><h3>Infrastructure</h3><p>Host and node distribution, backend classification and infrastructure intelligence.</p></div>
+        <div class="card"><h3>Audit & Governance</h3><p>Policy coverage, actions, ownership, audit data, naming and governance gaps.</p></div>
+        <div class="card"><h3>Migration Readiness</h3><p>Readiness by area, missing-data impact, effort indicators and prioritized recommendations.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="screens">
+    <div class="wrap">
+      <h2 class="section-title">Platform & report screenshots</h2>
+      <p class="section-sub">
+        All screenshots below use sanitized TechTurn demo data and are intended to demonstrate the workflow and reporting model without exposing customer information.
+      </p>
+
+      <div class="gallery">
+        <div class="shot"><img src="assets/techturn_controller_extraction_dashboard.png" alt="Controller extraction screen"><div class="cap"><strong>Controller extraction</strong><span>Read-only extraction of controller-level configuration and inventory.</span></div></div>
+        <div class="shot"><img src="assets/techturn_paymentsportal_extraction_dashboard.png" alt="Application extraction screen"><div class="cap"><strong>Application extraction</strong><span>Select application-level components and generate structured output.</span></div></div>
+        <div class="shot"><img src="assets/techturn_executive_summary_dashboard.png" alt="Executive Summary report"><div class="cap"><strong>Executive Summary</strong><span>Architecture, readiness, monitoring coverage, risk and recommendations.</span></div></div>
+        <div class="shot"><img src="assets/techturn_technical_inventory_dashboard.png" alt="Technical Inventory report"><div class="cap"><strong>Technical Inventory</strong><span>Topology and dependency inventory designed for migration planning.</span></div></div>
+        <div class="shot"><img src="assets/techturn_health_rules_dashboard.png" alt="Health Rules report"><div class="cap"><strong>Health Rules assessment</strong><span>Coverage, policy/action attachment and rule-level recommendations.</span></div></div>
+        <div class="shot"><img src="assets/techturn_infrastructure_report_dashboard.png" alt="Infrastructure report"><div class="cap"><strong>Infrastructure assessment</strong><span>Hosts, JVMs, databases, backend classification and infrastructure findings.</span></div></div>
+        <div class="shot"><img src="assets/techturn_audit_governance_dashboard.png" alt="Audit and Governance report"><div class="cap"><strong>Audit & Governance</strong><span>Policy, action, ownership and governance coverage.</span></div></div>
+        <div class="shot"><img src="assets/migration_readiness_report_dashboard.png" alt="Migration Readiness report"><div class="cap"><strong>Migration Readiness</strong><span>Readiness by domain, missing-data impact, estimated effort and priorities.</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="callout" id="contact">
+        <h2>Planning an AppDynamics migration?</h2>
+        <p>
+          I am continuing to expand this platform toward deeper AppDynamics-to-Dynatrace mapping,
+          migration planning, configuration comparison and automated validation.
+          For collaboration or consulting discussions, connect with TechTurn.
+        </p>
+      </div>
+      <p class="small" style="margin-top:18px">
+        Demo data only. AppDynamics and Dynatrace are trademarks of their respective owners. This page is not an official product page of either vendor.
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© TechTurn. AppDynamics Discovery & Migration Assessment Platform.</div>
+</footer>
+</body>
+</html>
